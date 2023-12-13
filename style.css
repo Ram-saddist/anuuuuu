@@ -1,0 +1,120 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Noto Serif';
+}
+.nav-links{
+    width:30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbar-brand{
+    font-size: 3rem;
+}
+.nav-links a{
+    
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.navbar-toggler{
+    display: none;
+}
+.section1 {
+    position: relative;
+    height: 90vh;
+    background: url('atmanlogo2.jpg') center/cover no-repeat fixed;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container {
+    position: relative;
+    z-index: 1;
+}
+
+.glad{
+    line-height: 2;
+}
+.glad h2{
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.glad p{
+    font-size: 1.3rem;
+}
+.coming-soon{
+    text-decoration: none;
+    border: 2px solid black;
+    color: black;
+    padding:2% 7% !important;
+    border-radius:25px ;
+}
+.coming-soon:hover{
+    background-color: black;
+    color: white;
+}
+
+.struggles .card {
+    border: none;
+    margin-bottom: 20px; /* Adjust the margin to control the gap between cards */
+  }
+
+/* Additional styling for better responsiveness */
+@media (max-width: 767px) {
+    .section1 {
+        height: auto;
+    }
+
+    .overlay {
+        height: auto;
+        /* Adjust the overlay height for smaller screens */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        list-style: none; /* Remove default list styling */
+    }
+}
